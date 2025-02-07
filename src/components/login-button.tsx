@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 
-const BASE_PATH = import.meta.env.VITE_BASE_PATH || '';
+const BASE_PATH = import.meta.env.VITE_BASE_PATH || '/';
 
 export const LoginButton = () => {
   return (

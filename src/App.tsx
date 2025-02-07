@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { ArticleList } from './components/aricle-list';
 import { Article } from './components/article';
 
-const BASE_PATH = import.meta.env.VITE_BASE_PATH || '';
+const BASE_PATH = import.meta.env.VITE_BASE_PATH || '/';
 const About = () => {
     return <h1 >О нас</h1>;
 }

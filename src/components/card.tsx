@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const BASE_PATH = import.meta.env.VITE_BASE_PATH || '';
+const BASE_PATH = import.meta.env.VITE_BASE_PATH || '/';
 
 type CardProps = {
   id: string,
