@@ -18,7 +18,7 @@ const App = () => {
     <>
     <Header />
     <Routes>
-      <Route path={`${BASE_PATH}`} element={<ArticleList />} />
+      <Route path={`/opinion/`} element={<ArticleList />} />
       <Route path={`${BASE_PATH}about`} element={<About />} />
       <Route path={`${BASE_PATH}contact`} element={<Contact />} />
       <Route
