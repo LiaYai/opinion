@@ -26,11 +26,11 @@ const App = () => {
     <>
     <Header />
     <Routes>
-      <Route path="/" element={<ArticleList />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/opinion/" element={<ArticleList />} />
+      <Route path="/opinion/about" element={<About />} />
+      <Route path="/opinion/contact" element={<Contact />} />
       <Route
-            path={'/article/:articleId'}
+            path={'/opinion/article/:articleId'}
             element={
                 <Article />
             }
