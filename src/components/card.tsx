@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 
+const BASE_PATH = import.meta.env.VITE_BASE_PATH || '';
+
 type CardProps = {
   id: string,
   title: string,
@@ -15,7 +17,7 @@ export const Card = ({ id, title, text, src }: CardProps) => {
         <h2 className="text-heading text-2xl text-semibold mb-2">{title}</h2>
         <p className="line-clamp-5">{text}</p>
         <div className="card-actions justify-end">
-          <Link to={`/article/${id}`} className="text-accent">Подробнее...</Link>
+          <Link to={`${BASE_PATH}article/${id}`} className="text-accent">Подробнее...</Link>
         </div>
       </div>
     </div>

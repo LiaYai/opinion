@@ -1,14 +1,10 @@
-//import { useState } from 'react'
 import { Header } from './components/header'
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { ArticleList } from './pages/ArticleList';
-//import { useLocation, useNavigate } from 'react-router-dom';
-//import { Modal } from './components/modal';
+import { ArticleList } from './components/aricle-list';
 import { Article } from './components/article';
 
-// Компоненты для маршрутов
-
+const BASE_PATH = import.meta.env.VITE_BASE_PATH || '';
 const About = () => {
     return <h1 >О нас</h1>;
 }
@@ -18,23 +14,17 @@ const Contact = () => {
 }
 
 const App = () => {
-  // const location = useLocation();
-  // const background = location.state?.background;
-  // const navigate = useNavigate();
-
   return (
     <>
     <Header />
     <Routes>
-      <Route path="/opinion/" element={<ArticleList />} />
-      <Route path="/opinion/about" element={<About />} />
-      <Route path="/opinion/contact" element={<Contact />} />
+      <Route path={`${BASE_PATH}`} element={<ArticleList />} />
+      <Route path={`${BASE_PATH}about`} element={<About />} />
+      <Route path={`${BASE_PATH}contact`} element={<Contact />} />
       <Route
-            path={'/opinion/article/:articleId'}
-            element={
-                <Article />
-            }
-          />
+            path={`${BASE_PATH}article/:articleId`}
+            element={<Article />}
+      />
       <Route path="*" element={<h1>404</h1>} />
     </Routes>  
     {/* <Routes>

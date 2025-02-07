@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: '/opinion/',
+  base: process.env.VITE_BASE_PATH || '/',
 })
