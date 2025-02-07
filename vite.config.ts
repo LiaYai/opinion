@@ -8,7 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: process.env.NODE_ENV === 'production'
-    ? '/opinion/'
-    : '/',
+  base: process.env.VITE_BASE_PATH,
 })
