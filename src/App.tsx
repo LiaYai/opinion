@@ -2,7 +2,7 @@
 import { Header } from './components/header'
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { Home } from './pages/Home';
+import { ArticleList } from './pages/ArticleList';
 //import { useLocation, useNavigate } from 'react-router-dom';
 //import { Modal } from './components/modal';
 import { Article } from './components/article';
@@ -26,12 +26,18 @@ const App = () => {
     <>
     <Header />
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<ArticleList />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route
+            path={'/article/:articleId'}
+            element={
+                <Article />
+            }
+          />
       <Route path="*" element={<h1>404</h1>} />
     </Routes>  
-    <Routes>
+    {/* <Routes>
           {/* <Route
             path={'/article/:articleId'}
             element={
@@ -41,14 +47,9 @@ const App = () => {
                 <Article />
               </Modal>
             }
-          /> */}
-          <Route
-            path={'/article/:articleId'}
-            element={
-                <Article />
-            }
-          />
-    </Routes>
+          /> 
+          <
+    </Routes> */}
     </>
   )
 }

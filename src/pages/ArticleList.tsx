@@ -1,7 +1,7 @@
 import { Card } from "../components/card";
 import { articles } from "../data/articles";
 
-export const Home = () => {
+export const ArticleList = () => {
   return (
     <div className="flex flex-col p-5">
       <h1 className='text-3xl text-heading mb-5 text-center'>Список статей</h1>
