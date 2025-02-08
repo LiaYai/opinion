@@ -15,10 +15,10 @@ export const Article = () => {
 
   return (
     <div className="w-full  p-4 min-h-[600px]">
-      <h2 className="text-heading text-2xl/tight text-center font-medium  mb-3.5 ">{title}</h2>
+      <h2 className="text-heading text-xl sm:text-2xl/tight text-center font-medium  mb-3.5 ">{title}</h2>
       <img className="float-right rounded w-1/3 " src={src} alt={title} />
       {text.map((paragraph, index) => (
-            <ReactMarkdown key={index} className="indent-8 not-last:mb-1.5">{paragraph}</ReactMarkdown>
+            <ReactMarkdown key={index} className="text-sm sm:text-base indent-8 not-last:mb-1.5">{paragraph}</ReactMarkdown>
           ))}
     </div>
   )
