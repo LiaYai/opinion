@@ -24,7 +24,7 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-      <BurgerMenu />
+      {/* <BurgerMenu /> */}
       {/* <LoginButton /> */}
     </header>
   )
