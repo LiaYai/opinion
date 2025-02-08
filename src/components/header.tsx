@@ -12,7 +12,7 @@ export const Header = () => {
         <img src={`${BASE_PATH}logo.png`} alt="logo" className='h-16 w-auto sm:h-22'/>
       </NavLink>
       <nav>
-        <ul className='flex flex-col sm:flex-row sm:gap-4 gap-none justify-between items-center text-accent font-bold py-2.5'>
+        <ul className='flex gap-4 justify-between items-center text-accent font-bold py-2.5 text-lg sm:text-xl'>
           <li>
             <NavLink to={`${BASE_PATH}`}>Главная</NavLink>
           </li>

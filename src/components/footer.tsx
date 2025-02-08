@@ -14,7 +14,7 @@ export const Footer = () => {
         </a>
         <a href="https://t.me/mind_autonomy_practicum" target="_blank" rel="noopener noreferrer" className='text-accent flex items-center'>
           <FontAwesomeIcon icon={faTelegram} className='mr-2' />
-          <span>Автономия разума.Практикум</span>
+          <span>Автономия разума. Практикум</span>
         </a>
       </div>
       <p className='text-accent font-bold text-sm sm:text-base mt-2 sm:mt-0'>© 2025</p>
