@@ -1,7 +1,7 @@
 
 import { NavLink } from "react-router-dom";
 // import { LoginButton } from './login-button';
-import { BurgerMenu } from "./burger-menu/burger-menu";
+// import { BurgerMenu } from "./burger-menu/burger-menu";
 
 const BASE_PATH = import.meta.env.VITE_BASE_PATH || '/';
 
