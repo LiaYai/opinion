@@ -18,9 +18,9 @@ const App = () => {
   const location = useLocation();
   const background = location.state && location.state.background;
   
-  const handleCloseModal = () => {
-    navigate(background?.pathname || location.pathname, { replace: true});
-  };
+  // const handleCloseModal = () => {
+  //   navigate(background?.pathname || location.pathname, { replace: true});
+  // };
 
   return (
     <>
@@ -46,7 +46,7 @@ const App = () => {
         />
         <Route path="*" element={<h1>404</h1>} />
       </Routes> 
-      {background && (
+      {/* {background && (
       <Routes>
         <Route
           path={`${BASE_PATH}login`}
@@ -59,7 +59,7 @@ const App = () => {
           }
         /> 
       </Routes>
-      )}
+      )} */}
     </main>
     <Footer />
     </>
