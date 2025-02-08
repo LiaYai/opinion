@@ -1,10 +1,11 @@
 type ButtonProps = {
   children: string,
-  onClick?: () => void
+  onClick?: () => void,
+  className?: string
 };
 
-export const PrimaryButton = ({children}: ButtonProps) => {
-  return <button type='button' className="bg-accent rounded-[50px] text-primary font-bold px-5 py-1.5 cursor-pointer focus-visible:none focus-visible:ring-2  hover:shadow-2xl hover:filter:invert()"> {children} </button>
+export const PrimaryButton = ({onClick,children, className}: ButtonProps) => {
+  return <button onClick={onClick} type='button' className={`bg-accent rounded-[50px] text-primary font-bold px-5 py-1.5 cursor-pointer focus-visible:none focus-visible:ring-2  hover:shadow-2xl hover:filter:invert() ${className}`}> {children} </button>
 }
 
 export const SecondaryButton = ({children}: ButtonProps) => {

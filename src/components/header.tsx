@@ -1,17 +1,18 @@
 
 import { NavLink } from "react-router-dom";
-import { LoginButton } from './login-button';
+// import { LoginButton } from './login-button';
+import { BurgerMenu } from "./burger-menu/burger-menu";
 
 const BASE_PATH = import.meta.env.VITE_BASE_PATH || '/';
 
 export const Header = () => {
   return (
-    <header className='flex justify-between items-center h-22 p-5 bg-accent/5'>
-      <NavLink to={`${BASE_PATH}`}>
-        <img src={`${BASE_PATH}logo.png`} alt="logo" className='w-auto h-22'/>
+    <header className='flex justify-between flex-row items-center sm:h-22 h-fit px-4 sm:px-7 bg-accent/5'>
+      <NavLink to={`${BASE_PATH}`} className='flex-shrink-0'>
+        <img src={`${BASE_PATH}logo.png`} alt="logo" className='h-16 w-auto sm:h-22'/>
       </NavLink>
       <nav>
-        <ul className='flex gap-4 text-accent font-bold'>
+        <ul className='flex flex-col sm:flex-row sm:gap-4 gap-none justify-between items-center text-accent font-bold py-2.5'>
           <li>
             <NavLink to={`${BASE_PATH}`}>Главная</NavLink>
           </li>
@@ -23,7 +24,8 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-      <LoginButton />
+      <BurgerMenu />
+      {/* <LoginButton /> */}
     </header>
   )
 }

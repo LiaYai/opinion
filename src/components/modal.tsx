@@ -1,5 +1,6 @@
-import { memo, useEffect } from 'react';
+import { memo, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
+import { PrimaryButton } from './button';
 
 type TModalProps = {
   onClose: () => void;
@@ -9,30 +10,41 @@ type TModalProps = {
 const modalRoot = document.getElementById('modals');
 
 export const Modal = memo(({ onClose, children }: TModalProps) => {
+  const overlayRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
+    const overlay = overlayRef?.current;
+
+    const handleEscapeKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
 
-    document.addEventListener('keydown', handleEsc);
+    const handleOverlayClick = (e: MouseEvent) => {
+      if (e.target === overlay) {
+        onClose();
+      }
+    };
+
+    if (overlay) {
+      overlay.addEventListener('click', handleOverlayClick);
+      document.addEventListener('keydown', handleEscapeKey);
+      overlay.focus();
+    }
+  
     return () => {
-      document.removeEventListener('keydown', handleEsc);
+      if (overlay) {
+        overlay.removeEventListener('click', handleOverlayClick);
+        document.removeEventListener('keydown', handleEscapeKey);
+      }
     };
   }, [onClose]);
 
   return ReactDOM.createPortal(
-    <div style={{
-      position: 'fixed',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-      backgroundColor: 'white',
-      padding: '20px',
-      boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
-      zIndex: 1000,
-  }}>
-      {children}
-      <button onClick={onClose}>Закрыть</button>
+    <div ref={overlayRef} className='fixed inset-0 flex items-center justify-center bg-black/50' >
+        <div className='relative text-center h-[400px] w-[400px] bg-pink-500'>
+        {children}
+        <PrimaryButton onClick={onClose} className='absolute top-5 right-5 cursor-pointer '>Закрыть</PrimaryButton>
+        </div>
     </div>,
     modalRoot as HTMLDivElement
   );
