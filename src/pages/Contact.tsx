@@ -12,7 +12,7 @@ export const Contact = () => {
 
       <p className="text-base sm:text-lg text-body my-2"><b>Наша электронная почта</b> вам не нужна, мы вам обязательно ответим, если вы оставите дельный комментарий в нашем телеграмм-канале.</p>
 
-      <h3 className="text-xl sm:text-2xl text-heading my-5 font-bold">Наш телеграмм:</h3>
+      <h3 className="text-xl sm:text-2xl text-heading my-5 font-bold">Наш телеграм:</h3>
       <p className="text-base sm:text-lg text-body my-2 flex items-center text-accent">
         <FontAwesomeIcon icon={faTelegram} className="mr-2" />
         <a href="https://t.me/mind_autonomy" target="_blank" rel="noopener noreferrer" className="text-accent underline">Автономия разума</a>

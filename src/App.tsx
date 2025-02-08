@@ -6,6 +6,7 @@ import { Footer } from './components/footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
+import { NotFound } from './pages/NotFound';
 import { Article } from './components/article';
 import { Modal } from './components/modal';
 
@@ -44,7 +45,7 @@ const App = () => {
             </Modal>
           }
         />
-        <Route path="*" element={<h1>404</h1>} />
+        <Route path="*" element={<NotFound />} />
       </Routes> 
       {/* {background && (
       <Routes>
