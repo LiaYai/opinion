@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://LiaYai.github.io/opinion/",
+  "homepage": "https://LiaYai.github.io/opinion-gh/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
