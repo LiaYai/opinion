@@ -14,5 +14,5 @@ export default defineConfig({
       include: ['src/**/*.ts', 'src/**/*.tsx'],
     }),
   ],
-  base: env.NODE_ENV === 'production' ? '/opinion/' : '/',
+  base: env.NODE_ENV === 'production' ? '/opinion-gh/' : '/',
 });
