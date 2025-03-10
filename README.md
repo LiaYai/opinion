@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
+# Описание проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Сайт включает в себя несколько страниц: главную страницу со списком статей, страницу "О нас", страницу с контактами и страницу "Политика конфиденциальности". Проект разработан с использованием современных технологий и инструментов для обеспечения адаптивности, удобства и функциональности.
 
-Currently, two official plugins are available:
+## Что было сделано
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Адаптивная вёрстка
+Реализована адаптивная вёрстка с использованием **Tailwind CSS**, которая корректно отображается на всех устройствах (десктопы, планшеты, мобильные устройства).
 
-## Expanding the ESLint configuration
+### Разработка страниц
+Разработаны основные страницы сайта: главная страница со списком статей, страница "О нас", страница "Контакты" и страница "Политика конфиденциальности". Все страницы созданы без использования готового макета, что позволило реализовать уникальный дизайн.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Форма подписки
+По требованию заказчика, для использования российских сервисов, была интегрирована готовая форма из **Яндекс.Форм** для сохранения данных в **Яндекс.Таблице**.
 
-- Configure the top-level `parserOptions` property like this:
+### Переключение тем
+Добавлено переключение между светлой и тёмной темами. Учитываются предпочтения пользователя (настройки системы), а также предусмотрена возможность ручного выбора темы.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Бургер-меню
+Для мобильной версии сайта реализовано бургер-меню, которое обеспечивает удобную навигацию на небольших экранах.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Стек технологий
+- **React** — библиотека для построения пользовательских интерфейсов.
+- **TypeScript** — язык программирования для добавления статической типизации.
+- **Vite** — инструмент для сборки проекта, обеспечивающий высокую скорость разработки.
+- **Tailwind CSS** — CSS-фреймворк для создания адаптивных и современных интерфейсов.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Установка и запуск проекта
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Установите зависимости:
+  ```bash
+  npm install
+2. Запустите проект:
+  ```bash
+  npm run dev
